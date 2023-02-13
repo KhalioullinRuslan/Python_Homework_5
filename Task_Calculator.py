@@ -13,7 +13,7 @@ def ret(s):
     s = str(s)
     if s.isdigit():
         return float(s)
-    for f in ('-','+','*','/'):
+    for _ in ('-','+','*','/'):
         left, op, right = s.partition(c)
         if op == '*':
             return ret(left) * ret(right)
